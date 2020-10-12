@@ -48,8 +48,8 @@
   bottom: 0;
   padding: 10px;
   background-color: #0000008f;
-  width: 300px;
-  margin-bottom: 10px;
+  width: 285px;
+  margin: 0 0 14px 10px;
 }
 
 .favorite__subtitle {

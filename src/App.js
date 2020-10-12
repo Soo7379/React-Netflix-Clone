@@ -1,17 +1,17 @@
-import React from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
-import { useAuthListener } from "./hooks";
-import { IsUserRedirect, ProtectedRoute } from "./helpers/routes";
-import * as ROUTES from "./utils/routes";
-import { Browse, Favorite, Home, SignIn, SignUp } from "./pages";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { useAuthListener } from './hooks';
+import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
+import * as ROUTES from './utils/routes';
+import { Browse, Favorite, Home, SignIn, SignUp } from './pages';
+import './App.css';
 
 function App({ initialState }) {
   const { user } = useAuthListener();
-  console.log(initialState);
+
   return (
     <Router>
-      <div className="App">
+      <div className='App'>
         <Switch>
           <IsUserRedirect
             user={user}

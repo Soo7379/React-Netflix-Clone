@@ -1,15 +1,11 @@
 export const initialState = [
   {
-    category: "series",
-  },
-  {
-    favorites: "",
+    category: 'series',
   },
 ];
 
 export const actionTypes = {
-  SET_CATEGORY: "SET_CATEGORY",
-  SET_FAVORITES: "SET_FAVORITES",
+  SET_CATEGORY: 'SET_CATEGORY',
 };
 
 const reducer = (state, action) => {
@@ -18,12 +14,6 @@ const reducer = (state, action) => {
       return {
         ...state,
         category: action.category,
-      };
-
-    case actionTypes.SET_FAVORITES:
-      return {
-        ...state,
-        favorites: action.favorites,
       };
 
     default:

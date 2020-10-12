@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { auth } from "../lib/firebase";
-import { useStateValue } from "../contexts/StateProvider";
-import { Banner, Loading, NavBar, Profile, Row } from "../components";
-import requests from "../utils/requests";
+import React, { useEffect, useState } from 'react';
+import { auth } from '../lib/firebase';
+import { useStateValue } from '../contexts/StateProvider';
+import { Banner, Loading, NavBar, Profile, Row } from '../components';
+import requests from '../utils/requests';
 
 const BrowsePage = () => {
   const user = auth.currentUser || {};
@@ -28,30 +28,30 @@ const BrowsePage = () => {
 
           <Banner />
 
-          {category === "series" ? (
+          {category === 'series' ? (
             <>
               <Row
-                title="Action & Adventure"
+                title='Action & Adventure'
                 fetchUrl={requests.fetchActionSeries}
               />
-              <Row title="Comedy" fetchUrl={requests.fetchComedySeries} />
-              <Row title="Crime" fetchUrl={requests.fetchCrimeSeries} />
+              <Row title='Comedy' fetchUrl={requests.fetchComedySeries} />
+              <Row title='Crime' fetchUrl={requests.fetchCrimeSeries} />
               <Row
-                title="Sci-Fi & Fantasy"
+                title='Sci-Fi & Fantasy'
                 fetchUrl={requests.fetchSifiSeries}
               />
               <Row
-                title="Documentary"
+                title='Documentary'
                 fetchUrl={requests.fetchDocumentarySeries}
               />
             </>
           ) : (
             <>
-              <Row title="Action" fetchUrl={requests.fetchActionMovies} />
-              <Row title="Comedy" fetchUrl={requests.fetchComedyMovies} />
-              <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} />
-              <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
-              <Row title="Documentary" fetchUrl={requests.fetchDocumentaries} />
+              <Row title='Action' fetchUrl={requests.fetchActionMovies} />
+              <Row title='Comedy' fetchUrl={requests.fetchComedyMovies} />
+              <Row title='Horror' fetchUrl={requests.fetchHorrorMovies} />
+              <Row title='Romance' fetchUrl={requests.fetchRomanceMovies} />
+              <Row title='Documentary' fetchUrl={requests.fetchDocumentaries} />
             </>
           )}
         </div>
